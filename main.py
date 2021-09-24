@@ -39,26 +39,29 @@ def connect(host='http://google.com'):
     except:
         return False
 # test
-print( "Connected to Internet" if connect() else "You do not have internet!" )
-
-time.sleep(2)
-print("Finding Fastest Connection....")
-time.sleep(1)
-print("Conecting to server....")
-time.sleep(3)
-print("Loading generator....")
-time.sleep(4)
-print("Generating Code....")
-time.sleep(5)
-print("Encoding...")
-time.sleep(2)
-print("Process Complete!")
-time.sleep(1)
-print(e)
-print("\nCopy whats INSIDE the quotes\n")
-print("CTR+C does not work, use right click and copy\n")
-print("WARNING! MAKE SURE YOU HAVE YOUR OLD CODE WRITTEN DOWN IF YOU ARE GOING TO WANT TO HAVE YOUR OLD SAVE!")
-end = 1
-while end == 1:
-    print("\nOnce copied you may exit the program.")
-    input()
+if connect():
+  print("Connected to internet!")
+  time.sleep(2)
+  print("Finding Fastest Connection....")
+  time.sleep(1)
+  print("Conecting to server....")
+  time.sleep(3)
+  print("Loading generator....")
+  time.sleep(4)
+  print("Generating Code....")
+  time.sleep(5)
+  print("Encoding...")
+  time.sleep(2)
+  print("Process Complete!")
+  time.sleep(1)
+  print(e)
+  print("\nCopy whats INSIDE the quotes\n")
+  print("CTR+C does not work, use right click and copy\n")
+  print("WARNING! MAKE SURE YOU HAVE YOUR OLD CODE WRITTEN DOWN IF YOU ARE GOING TO WANT TO HAVE YOUR OLD SAVE!")
+  end = 1
+  while end == 1:
+      print("\nOnce copied you may exit the program.")
+      input()
+else:
+  print("You are not connected to the internet!")
+  time.sleep(60)
